@@ -1368,7 +1368,7 @@ Des connecteurs :
       database = "postgres",
       uid = "postgres",
     ### <b>
-      password = ""
+      password = "password"
     ### </b>
     )
     ```
@@ -1532,7 +1532,7 @@ options(tibble.print_max = 10, tibble.print_min = 10)
       database = "postgres",
       port = 5432,
       uid = "postgres",
-      password = ""
+      password = "password"
     )
     dbSendQuery(con, SQL("CREATE ROLE data_user LOGIN password 'data_pwd';"))
     dbSendQuery(con, SQL("CREATE DATABASE datawarehouse;"))
@@ -2424,7 +2424,7 @@ tidyverse_conflicts()
       database = "postgres",
       port = 5432,
       uid = "postgres",
-      password = ""
+      password = "password"
     )
     dbSendQuery(con, SQL("CREATE ROLE imdb_user LOGIN password 'imdb_pwd';"))
     dbSendQuery(con, SQL("CREATE DATABASE movies;"))
