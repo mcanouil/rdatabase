@@ -33,7 +33,30 @@ library(rmarkdown)
 library(kableExtra)
 
 source('https://github.com/mcanouil/DEV/raw/master/R/theme_black.R')
-source('https://github.com/mcanouil/DEV/raw/master/R/pretty_kable.R')
+
+pretty_kable <- function (
+  data, 
+  font_size = 12, 
+  format_args = list(scientific = -1, digits = 3, big.mark = ","), 
+  col.names = NA,
+  full_width = FALSE,
+  format = "html",
+  ...
+) {
+  output <- knitr::kable(
+    x = data, 
+    format.args = format_args, 
+    col.names = col.names,
+    ...
+  )
+  kableExtra::kable_styling(
+    kable_input = output,
+    bootstrap_options = c("striped", "hover", "condensed", "responsive"),
+    full_width = full_width,
+    position = "center",
+    font_size = font_size
+  )
+}
 
 options("width" = 80)
 ### Set knitr rmarkdown chunk options
