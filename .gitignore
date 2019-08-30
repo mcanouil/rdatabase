@@ -1,5 +1,4 @@
 **.Rproj.user
-
 **.glo
 **.ist
 **.out
@@ -13,4 +12,5 @@
 **.fdb_latexmk
 **.fls
 **.log
+**.html
 .Rproj.user
