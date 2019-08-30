@@ -20,6 +20,9 @@ addons:
 env:
   global:
   - PGPORT=5432
+
+before_script:
+  - psql -d postgres -U postgres -c 'ALTER USER postgres WITH PASSWORD "password";'
   
 script: Rscript -e 'rmarkdown::render(input = "rdatabase.Rmd")'
 
