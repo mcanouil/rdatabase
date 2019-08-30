@@ -32,8 +32,8 @@ library(knitr)
 library(rmarkdown)
 library(kableExtra)
 
-devtools::source_url('https://github.com/mcanouil/DEV/raw/master/R/theme_black.R')
-devtools::source_url('https://github.com/mcanouil/DEV/raw/master/R/pretty_kable.R')
+source('https://github.com/mcanouil/DEV/raw/master/R/theme_black.R')
+source('https://github.com/mcanouil/DEV/raw/master/R/pretty_kable.R')
 
 options("width" = 80)
 ### Set knitr rmarkdown chunk options
@@ -70,9 +70,8 @@ options(tibble.print_max = 3, tibble.print_min = 3)
 # )
 ```
 
-```{sh, eval = FALSE, echo = FALSE, results = "hide"}
-sudo apt-get update
-sudo apt-get install postgresql-11 postgresql-client-11
+```{sh, eval = TRUE, echo = FALSE, results = "hide"}
+sudo apt-get update && sudo apt-get install postgresql-11 postgresql-client-11
 # ps -ef | grep postgre
 sudo service postgresql start
 sudo su postgres

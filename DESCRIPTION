@@ -1,0 +1,21 @@
+Package: rdatabase
+Title: R & Base de Données
+Version: 0.0.1
+Imports: 
+  grid,
+  scales,
+  broom,
+  viridis,
+  Hmisc,
+  knitr,
+  rmarkdown,
+  kableExtra,
+  tidyverse,
+  pryr,
+  readxl,
+  DBI,
+  odbc,
+  dbplyr,
+  nycflights13,
+  xml2,
+  rvest
