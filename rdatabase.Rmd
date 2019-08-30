@@ -92,7 +92,8 @@ options(tibble.print_max = 3, tibble.print_min = 3)
 #   path = "./materials/ratings.csv"
 # )
 
-odbc_driver <- odbc::odbcListDrivers()[which(odbc::odbcListDrivers()["attribute"]=="Driver")[1], "name"]
+odbc_driver_list <- odbc::odbcListDrivers()
+odbc_driver <- grep("PostgreSQL", odbc_driver_list[which(odbc_driver_list["attribute"]=="Driver"), "name"], value = TRUE)[1]
 ```
 
 ```{sh, eval = FALSE, echo = FALSE, results = "hide"}
