@@ -8,8 +8,7 @@ before_install:
   - sudo apt-get --yes --force-yes update -qq
   - sudo apt-get install --yes postgresql-11 postgresql-client-11
   - sudo service postgresql start
-  - sudo su postgres
-  - psql -d postgres -U postgres; ALTER USER postgres WITH PASSWORD 'password'; \q
+  - sudo su postgres; psql -d postgres -U postgres; ALTER USER postgres WITH PASSWORD 'password'; \q
 
 script: Rscript -e 'rmarkdown::render(input = "rdatabase.Rmd")'
 
