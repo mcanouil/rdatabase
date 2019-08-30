@@ -1364,7 +1364,7 @@ Des connecteurs :
       drv = odbc(),
       driver = odbc_driver,
       server = "localhost",
-      port = 5432,
+      port = 5433,
       database = "postgres",
       uid = "postgres",
     ### <b>
@@ -1377,7 +1377,7 @@ Des connecteurs :
       drv = odbc(),
       driver = odbc_driver,
       server = "localhost",
-      port = 5432,
+      port = 5433,
       database = "postgres",
       uid = "postgres",
     ### <b>
@@ -1426,7 +1426,7 @@ Des connecteurs :
       driver = odbc_driver,
       server = "localhost",
       database = "test_data",
-      port = 5432,
+      port = 5433,
     ### <b>
       uid = "test_user",
       password = "test_pwd"
@@ -1530,7 +1530,7 @@ options(tibble.print_max = 10, tibble.print_min = 10)
       driver = odbc_driver,
       server = "localhost",
       database = "postgres",
-      port = 5432,
+      port = 5433,
       uid = "postgres",
       password = "password"
     )
@@ -1555,7 +1555,7 @@ options(tibble.print_max = 10, tibble.print_min = 10)
       driver = odbc_driver,
       server = "localhost",
       database = "datawarehouse",
-      port = 5432,
+      port = 5433,
       uid = "data_user",
       password = "data_pwd"
     )
@@ -1661,7 +1661,7 @@ tidyverse_conflicts()
       driver = odbc_driver,
       server = "localhost",
       database = "datawarehouse",
-      port = 5432,
+      port = 5433,
       uid = "data_user",
       password = "data_pwd"
     )
@@ -1937,7 +1937,7 @@ et en ajoutant une colonne constructeur "const".
       driver = odbc_driver,
       server = "localhost",
       database = "datawarehouse",
-      port = 5432,
+      port = 5433,
       uid = "data_user",
       password = "data_pwd"
     )
@@ -2171,7 +2171,7 @@ dbDisconnect(con)
       driver = odbc_driver,
       server = "localhost",
       database = "datawarehouse",
-      port = 5432,
+      port = 5433,
       uid = "data_user",
       password = "data_pwd"
     )
@@ -2422,7 +2422,7 @@ tidyverse_conflicts()
       driver = odbc_driver,
       server = "localhost",
       database = "postgres",
-      port = 5432,
+      port = 5433,
       uid = "postgres",
       password = "password"
     )
@@ -2442,7 +2442,7 @@ tidyverse_conflicts()
       driver = odbc_driver,
       server = "localhost",
       database = "movies",
-      port = 5432,
+      port = 5433,
       uid = "imdb_user",
       password = "imdb_pwd"
     )
