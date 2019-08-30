@@ -12,6 +12,11 @@ addons:
     packages:
     - postgresql-11
     - postgresql-client-11
+    - tdsodbc
+    - odbc-postgresql
+    - unixodbc
+    - unixodbc-dev
+    
 env:
   global:
   - PGPORT=5432
