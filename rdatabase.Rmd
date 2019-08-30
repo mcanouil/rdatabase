@@ -93,7 +93,7 @@ options(tibble.print_max = 3, tibble.print_min = 3)
 # )
 ```
 
-```{sh, eval = TRUE, echo = FALSE, results = "hide"}
+```{sh, eval = FALSE, echo = FALSE, results = "hide"}
 sudo apt-get update && sudo apt-get install postgresql-11 postgresql-client-11
 # ps -ef | grep postgre
 sudo service postgresql start
