@@ -18,4 +18,5 @@ Imports:
   dbplyr,
   nycflights13,
   xml2,
-  rvest
+  rvest,
+  benchr
