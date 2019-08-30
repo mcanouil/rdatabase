@@ -91,6 +91,8 @@ options(tibble.print_max = 3, tibble.print_min = 3)
 #   x = readr::read_csv(file = "./materials/ratings.csv", locale = readr::locale(encoding = "Windows-1252")), 
 #   path = "./materials/ratings.csv"
 # )
+
+odbc_driver <- odbc::odbcListDrivers()[which(odbc::odbcListDrivers()["attribute"]=="Driver")[1], "name"]
 ```
 
 ```{sh, eval = FALSE, echo = FALSE, results = "hide"}
@@ -1359,7 +1361,7 @@ Des connecteurs :
     ```{r}
     con <- dbConnect(
       drv = odbc(),
-      driver = "PostgreSQL Unicode",
+      driver = odbc_driver,
       server = "localhost",
       port = 5432,
       database = "postgres",
@@ -1372,7 +1374,7 @@ Des connecteurs :
     ```{r, eval = FALSE}
     con <- dbConnect(
       drv = odbc(),
-      driver = "PostgreSQL Unicode",
+      driver = odbc_driver,
       server = "localhost",
       port = 5432,
       database = "postgres",
@@ -1420,7 +1422,7 @@ Des connecteurs :
     ```{r}
     con <- dbConnect(
       drv = odbc(),
-      driver = "PostgreSQL Unicode",
+      driver = odbc_driver,
       server = "localhost",
       database = "test_data",
       port = 5432,
@@ -1524,7 +1526,7 @@ options(tibble.print_max = 10, tibble.print_min = 10)
     ```{r, warning = FALSE, message = FALSE, results = "hide"}
     con <- dbConnect(
       drv = odbc(),
-      driver = "PostgreSQL Unicode",
+      driver = odbc_driver,
       server = "localhost",
       database = "postgres",
       port = 5432,
@@ -1549,7 +1551,7 @@ options(tibble.print_max = 10, tibble.print_min = 10)
     ```{r, warning = FALSE, message = FALSE, results = "hide"}
     con <- dbConnect(
       drv = odbc(),
-      driver = "PostgreSQL Unicode",
+      driver = odbc_driver,
       server = "localhost",
       database = "datawarehouse",
       port = 5432,
@@ -1655,7 +1657,7 @@ tidyverse_conflicts()
     ```{r}
     con <- dbConnect(
       drv = odbc(),
-      driver = "PostgreSQL Unicode",
+      driver = odbc_driver,
       server = "localhost",
       database = "datawarehouse",
       port = 5432,
@@ -1931,7 +1933,7 @@ et en ajoutant une colonne constructeur "const".
     ```{r}
     con <- dbConnect(
       drv = odbc(),
-      driver = "PostgreSQL Unicode",
+      driver = odbc_driver,
       server = "localhost",
       database = "datawarehouse",
       port = 5432,
@@ -2165,7 +2167,7 @@ dbDisconnect(con)
     ```{r, echo = FALSE}
     con <- dbConnect(
       drv = odbc(),
-      driver = "PostgreSQL Unicode",
+      driver = odbc_driver,
       server = "localhost",
       database = "datawarehouse",
       port = 5432,
@@ -2416,7 +2418,7 @@ tidyverse_conflicts()
     ```{r, results = "hide", warning = FALSE}
     con <- dbConnect(
       drv = odbc(),
-      driver = "PostgreSQL Unicode",
+      driver = odbc_driver,
       server = "localhost",
       database = "postgres",
       port = 5432,
@@ -2436,7 +2438,7 @@ tidyverse_conflicts()
     ```{r, results = "hide"}
     con <- dbConnect(
       drv = odbc(),
-      driver = "PostgreSQL Unicode",
+      driver = odbc_driver,
       server = "localhost",
       database = "movies",
       port = 5432,

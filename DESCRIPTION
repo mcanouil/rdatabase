@@ -19,4 +19,5 @@ Imports:
   nycflights13,
   xml2,
   rvest,
-  benchr
+  benchr,
+  writexl
