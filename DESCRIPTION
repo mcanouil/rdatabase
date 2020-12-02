@@ -21,4 +21,4 @@ Imports:
   rvest,
   benchr,
   writexl
-License: MIT + file LICENSE
+License: CC BY 4.0
